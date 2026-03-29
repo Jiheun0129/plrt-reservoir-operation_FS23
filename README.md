@@ -40,13 +40,5 @@ The repository includes the required input files directly:
 ### Important
 The standardized and raw reservoir datasets are provided as compressed `.zip` files.
 
-Before running the notebook, you must extract them. After extraction, the directory structure should be:
-.
-├── meta_all(508).csv
-├── key_all(508)_stodiff_fixed.csv
-├── plrt_FS23_simulation.ipynb
-├── std_total(508)_stodiff_fixed/
-│   └── (CSV files for each res_id)
-├── raw_total(508)_stodiff_fixed/
-│   └── (CSV files for each res_id)
+Before running the notebook, you must extract them.
 
