@@ -22,7 +22,7 @@ The original package combines decision trees and linear regression to create Pie
 
 In this study, the PLRT concept was adapted into a rule-based reservoir operation model for recursive simulation of reservoir release and storage.
 
-The full implementation and workflow are written in "plrt_FS23_simulation.ipynb". This notebook contains:
+The full implementation and workflow are written in "plrt_FS23_simulation.py". This notebook contains:
 - the PLRT rule-based model,
 - recursive simulation logic,
 - boundary-constrained simulation,
@@ -39,7 +39,7 @@ The repository includes the required input files directly:
 
 The standardized and raw reservoir datasets are provided as compressed `.zip` files.
 
-Before running the notebook, you must extract them.
+Before running the python code, you must extract them.
 
 A subset of reservoir data (21 reservoirs) used in this study is derived from Li et al (2025), where the dataset is available via HydroShare:
 https://www.hydroshare.org/resource/63add4d5826a4b21a6546c571bdece10/
