@@ -1,2 +1,33 @@
 # plrt-reservoir-operation_FS23
-Code for Journal of Hydrology X manuscript "Deriving Reservoir Operational Groups using Piecewise Linear Regression Trees".
+This repository contains the code used for the JoHX manuscript: "Deriving Reservoir Operational Groups using Piecewise Linear Regression Trees".
+
+## Authors
+Lucas Ford, Jiheun Kim, A. Sankarasubramanian
+
+The study uses a Piecewise Linear Regression Tree (PLRT)-based framework to identify reservoir operational groups and simulate reservoir release behavior across multiple reservoirs using standardized hydrologic and storage variables.
+
+This repository includes:
+- a rule-based PLRT model for release prediction,
+- simulation code for recursive reservoir operation prediction,
+- optional boundary-constrained simulation,
+- evaluation scripts for multi-frequency data assimilation experiments.
+
+## Relation to the original PLRT package
+The PLRT implementation used in this study was developed based on the ideas introduced in Alexander and Grimshaw (1996), and follows the structure and concepts of the original `py-plrt` repository developed by Lucas Ford:
+
+- Original repository: `https://github.com/lcford2/py-plrt`
+
+The original package combines decision trees and linear regression to create Piecewise Linear Regression Trees (PLRTs), where each terminal node uses a linear regression model instead of a mean-only prediction. This improves interpretability while allowing the model to capture linear relationships within each partition of the feature space.
+
+In this study, the original PLRT idea was adapted into a rule-based reservoir operation model for recursive simulation of reservoir release and storage states.
+
+## Data
+This repository assumes the following input data are available:
+
+- `meta_all(508).csv`
+- `key_all(508)_stodiff_fixed.csv`
+- standardized reservoir input files in `std_total(508)_stodiff_fixed/`
+- raw reservoir input files in `raw_total(508)_stodiff_fixed/`
+
+These files are expected under the `data/` directory.
+
