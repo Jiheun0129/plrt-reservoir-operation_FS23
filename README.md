@@ -12,22 +12,41 @@ This repository includes:
 - optional boundary-constrained simulation,
 - evaluation scripts for multi-frequency data assimilation experiments.
 
-## Relation to the original PLRT package
+## Relation to PLRT
+
 The PLRT implementation used in this study was developed based on the ideas introduced in Alexander and Grimshaw (1996), and follows the structure and concepts of the original `py-plrt` repository developed by Lucas Ford:
 
-- Original repository: `https://github.com/lcford2/py-plrt`
+- Original repository: https://github.com/lcford2/py-plrt
 
 The original package combines decision trees and linear regression to create Piecewise Linear Regression Trees (PLRTs), where each terminal node uses a linear regression model instead of a mean-only prediction. This improves interpretability while allowing the model to capture linear relationships within each partition of the feature space.
 
-In this study, the original PLRT idea was adapted into a rule-based reservoir operation model for recursive simulation of reservoir release and storage states.
+In this study, the PLRT concept was adapted into a rule-based reservoir operation model for recursive simulation of reservoir release and storage.
+
+The full implementation and workflow are written in "plrt_FS23_simulation.ipynb". This notebook contains:
+- the PLRT rule-based model,
+- recursive simulation logic,
+- boundary-constrained simulation,
+- and performance evaluation.
 
 ## Data
-This repository assumes the following input data are available:
+
+The repository includes the required input files directly:
 
 - `meta_all(508).csv`
 - `key_all(508)_stodiff_fixed.csv`
-- standardized reservoir input files in `std_total(508)_stodiff_fixed/`
-- raw reservoir input files in `raw_total(508)_stodiff_fixed/`
+- `std_total(508)_stodiff_fixed.zip`
+- `raw_total(508)_stodiff_fixed.zip`
 
-These files are expected under the `data/` directory.
+### Important
+The standardized and raw reservoir datasets are provided as compressed `.zip` files.
+
+Before running the notebook, you must extract them. After extraction, the directory structure should be:
+.
+├── meta_all(508).csv
+├── key_all(508)_stodiff_fixed.csv
+├── plrt_FS23_simulation.ipynb
+├── std_total(508)_stodiff_fixed/
+│   └── (CSV files for each res_id)
+├── raw_total(508)_stodiff_fixed/
+│   └── (CSV files for each res_id)
 
