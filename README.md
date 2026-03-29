@@ -37,7 +37,6 @@ The repository includes the required input files directly:
 - `std_total(508)_stodiff_fixed.zip`
 - `raw_total(508)_stodiff_fixed.zip`
 
-### Important
 The standardized and raw reservoir datasets are provided as compressed `.zip` files.
 
 Before running the notebook, you must extract them.
