@@ -41,3 +41,13 @@ The standardized and raw reservoir datasets are provided as compressed `.zip` fi
 
 Before running the notebook, you must extract them.
 
+A subset of reservoir data (21 reservoirs) used in this study is derived from:
+
+Li, D., Chen, Y., Cai, X., Zhao, Q. (2025).  
+*Data-driven Reservoir Operation Rules for 450+ Reservoirs in Contiguous United States*.  
+HydroShare. https://doi.org/10.4211/hs.63add4d5826a4b21a6546c571bdece10
+
+The dataset is available via HydroShare:
+https://www.hydroshare.org/resource/63add4d5826a4b21a6546c571bdece10/
+
+
