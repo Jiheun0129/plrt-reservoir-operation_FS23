@@ -610,7 +610,6 @@ def process_one_rid(rid: int):
             print(f"[SKIP] rid={rid}")
             return []
 
-        # key_lookup 확인
         need_months = set(pd.to_datetime(std["date"]).dt.month.unique().astype(int))
         have_months = set(key_lookup.get(rid, {}).keys())
         if not need_months.issubset(have_months):
