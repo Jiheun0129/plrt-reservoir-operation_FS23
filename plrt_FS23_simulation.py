@@ -672,7 +672,7 @@ rid_list = sorted(set(RESID_SUBSET).intersection(std_resids).intersection(meta_r
 
 
 if __name__ == "__main__":
-    print(f"[INFO] 총 {len(rid_list)}개 reservoir 실행 (workers={N_WORKERS})")
+    print(f"[INFO] {len(rid_list)} reservoir (workers={N_WORKERS})")
 
     r2_rows = []
     with Pool(processes=N_WORKERS) as pool:
